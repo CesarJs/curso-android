@@ -17,9 +17,10 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Informe os dados"
-        android:inputType="text"
+        android:inputType="number|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/buttonSubmit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
