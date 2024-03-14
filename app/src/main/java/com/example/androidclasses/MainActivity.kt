@@ -2,6 +2,8 @@ package com.example.androidclasses
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.widget.Toast
 import com.example.androidclasses.databinding.ActivityMainBinding
 import kotlin.math.roundToInt
 
@@ -21,17 +23,34 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 //        Conversor Temperatura
+//        binding.buttonSubmit.setOnClickListener {
+//            if(!binding.inputTextIn.text.toString().isEmpty()) {
+//                var celsius = binding.inputTextIn.text.toString().toDouble()
+//                var fahrenheit = String.format("%.2f",  celsius * 1.8 + 32)
+//
+//                binding.textViewOutput.text = fahrenheit + " F"
+//            }else{
+//                binding.textViewOutput.text = "Temperatura inválida"
+//            }
+//
+//
+//        }
+
+        //Toast
         binding.buttonSubmit.setOnClickListener {
             if(!binding.inputTextIn.text.toString().isEmpty()) {
                 var celsius = binding.inputTextIn.text.toString().toDouble()
                 var fahrenheit = String.format("%.2f",  celsius * 1.8 + 32)
 
                 binding.textViewOutput.text = fahrenheit + " F"
+                Toast.makeText(applicationContext, "$fahrenheit F", Toast.LENGTH_SHORT).show()
             }else{
                 binding.textViewOutput.text = "Temperatura inválida"
+                Toast.makeText(applicationContext, "Temperatura inválida", Toast.LENGTH_SHORT).show()
             }
 
 
         }
+
     }
 }
